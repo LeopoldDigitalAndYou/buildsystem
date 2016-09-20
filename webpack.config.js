@@ -8,7 +8,8 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{test: /\.jade$/, loader: "jade"}
+			{test: /\.jade$/, loader: "pug-html-loader"},
+			{test: /\.scss$/, loader: "style!css!sass"}
 		]
 	},
 	plugins: [
