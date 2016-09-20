@@ -1,0 +1,16 @@
+$lightRed: #ff5555;
+$darkRed: #440000;
+
+p {
+  background: $lightRed;
+  color: $darkRed;
+}
+
+div {
+  p {
+    border: 3px solid $darkRed;
+  }
+  h1 {
+    border: 3px solid $lightRed;
+  }
+}
