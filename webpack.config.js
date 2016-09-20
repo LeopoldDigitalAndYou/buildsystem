@@ -1,3 +1,4 @@
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
@@ -8,11 +9,12 @@ module.exports = {
 	},
 	module: {
 		loaders: [
-			{test: /\.jade$/, loader: "pug-html-loader"},
+			{test: /\.jade$/, loader: "jade"},
 			{test: /\.scss$/, loader: "style!css!sass"}
 		]
 	},
 	plugins: [
-		new ExtractTextPlugin("style.css")
+		new ExtractTextPlugin("style.css"),
+		new HtmlWebpackPlugin({filename: "index.html", template:"./src/index.jade"})
 	]
 };
