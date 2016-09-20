@@ -10,6 +10,7 @@ module.exports = {
 	},
 	module: {
 		loaders: [
+			{test: /\.js$/, loader: "babel-loader?presets[]=es2015"},
 			{test: /\.jade$/, loader: "jade"},
 			{test: /\.scss$/, loader: ExtractTextPlugin.extract("css!sass")}
 		]

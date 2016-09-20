@@ -1,2 +1,11 @@
-var answer = 42;
-console.log('answer',answer);
+class Answer {
+	constructor(value) {
+		this.value = value;
+}
+question() {
+	console.log(this.value);
+}
+}
+
+var ultimate = new Answer(42);
+ultimate.question();
