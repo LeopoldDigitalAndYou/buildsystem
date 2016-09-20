@@ -2,12 +2,11 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-	entry: {
-		styles: ["./src/style/redthings.scss", "./src/style/bluethings.scss"]
-	},
+	entry: ["./src/style/redthings.scss", "./src/style/bluethings.scss",
+		"./src/js/hello.js", "./src/js/42.js"],
 	output: {
 		path: "./dist",
-		filename: "index.html"
+		filename: "bundle.js"
 	},
 	module: {
 		loaders: [
