@@ -1,0 +1,111 @@
+@import 'node_modules/foundation-sites/scss/foundation';
+
+@include foundation-everything(true);
+
+hr {
+  background: black;
+  height: 0.3em;
+}
+
+.title-bar {
+  width: 100%;
+  height: 70px;
+  background: black;
+}
+
+#titleCard {
+  background: black;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 2em 0;
+}
+
+#titleCard h1 {
+  width: 30%;
+  margin: 1em auto;
+}
+
+.column {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+#technologies {
+  text-transform: uppercase;
+}
+
+#technologies .column:hover img {
+  transform: rotate3d(0, 1, 0, 360deg);
+  transition-duration: 1s;
+  opacity: 0;
+}
+
+#technologies p {
+  display: none;
+}
+
+#technologies .column:hover p {
+  display: block;
+  position: absolute;
+}
+
+#tweets li {
+  position: relative;
+  padding: 0.4em;
+}
+
+#tweets li .tweet {
+  border: 1px solid black;
+  padding: 0.2em;
+}
+
+#tweets .icon {
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+}
+
+#tweets p {
+  margin: 0;
+}
+
+$portrait-size: 150px;
+.media-object-section img {
+  width: $portrait-size;
+  height: $portrait-size;
+}
+
+.media-object-section * {
+  color: black;
+  text-align: left;
+}
+
+.media-object-section blockquote {
+  border: 0;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.media-object-section blockquote p::before {
+  content:"“";
+}
+.media-object-section blockquote p::after {
+  content:"”";
+}
+.media-object-section blockquote p::before, .media-object-section blockquote p::after {
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.media-object-section h3, .media-object-section cite {
+  text-transform: uppercase;
+}
